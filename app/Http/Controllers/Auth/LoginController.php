@@ -11,7 +11,7 @@ class LoginController extends Controller
     {
         $this->middleware(['guest']);
     }
-    
+
     public function index()
     {
         return view('auth.login');
@@ -28,6 +28,6 @@ class LoginController extends Controller
             return back()->with('status', 'Invalid login details');
         }
 
-        return redirect()->route('dashboard');
+        return redirect()->route('home');
     }
 }
