@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Posty</title>
+        <title>Chatter</title>
 
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     </head>
@@ -22,7 +22,7 @@
             <ul class="flex items-center">
                 @auth
                     <li>
-                        <a href="{{ route('users.posts', auth()->user()->username) }}" class="p-3 text-white">{{ auth()->user()->name }}</a>
+                        <a href="{{ route('users.posts', auth()->user()->username) }}" class="p-3 text-white">{{ auth()->user()->username }}</a>
                     </li>
                     <li>
                         <form action="{{ route('logout') }}" method="post" class="p-3 inline">
