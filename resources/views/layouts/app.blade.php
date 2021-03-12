@@ -22,7 +22,7 @@
             <ul class="flex items-center">
                 @auth
                     <li>
-                        <a href="{{ route('home') }}" class="p-3 text-white">{{ auth()->user()->name }}</a>
+                        <a href="{{ route('users.posts', auth()->user()->username) }}" class="p-3 text-white">{{ auth()->user()->name }}</a>
                     </li>
                     <li>
                         <form action="{{ route('logout') }}" method="post" class="p-3 inline">
